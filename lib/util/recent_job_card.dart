@@ -48,7 +48,14 @@ class RecentJobCard extends StatelessWidget {
                 Text(companyName)
               ],
             ),
-            Text(hourlyRate.toString())
+            Container(
+              width: 60,
+              padding: EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.green
+              ),
+              child: Text('\$'+hourlyRate.toString()+'/hr'))
           ],
         ),
       ),

@@ -13,10 +13,27 @@ class HomePage extends StatelessWidget {
     ['lib/icons/uber.png', 'Uber', 'UI Designer', 80],
   ];
 
-  final List<RecentJobs> recentJobs=[
-    RecentJobs(companyImage: 'lib/icons/uber.png', companyName: 'Uber', jobTitle: 'Flutter Developer', hourlyRate: 70),
-     RecentJobs(companyImage: 'lib/icons/google.png', companyName: 'Google', jobTitle: 'Django Developer', hourlyRate: 70),
-
+  final List<RecentJobs> recentJobs = [
+    RecentJobs(
+        companyImage: 'lib/icons/uber.png',
+        companyName: 'Uber',
+        jobTitle: 'Flutter Developer',
+        hourlyRate: 70),
+    RecentJobs(
+        companyImage: 'lib/icons/google.png',
+        companyName: 'Google',
+        jobTitle: 'Django Developer',
+        hourlyRate: 70),
+    RecentJobs(
+        companyImage: 'lib/icons/apple.png',
+        companyName: 'Apple',
+        jobTitle: 'React Developer',
+        hourlyRate: 70),
+    RecentJobs(
+        companyImage: 'lib/icons/google.png',
+        companyName: 'Google',
+        jobTitle: 'Node.js Developer',
+        hourlyRate: 70),
   ];
 
   @override
@@ -134,9 +151,7 @@ class HomePage extends StatelessWidget {
           const SizedBox(height: 20),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 25
-              ),
+              padding: const EdgeInsets.symmetric(horizontal: 25),
               child: ListView.builder(
                 itemCount: recentJobs.length,
                 itemBuilder: (context, index) {
@@ -145,8 +160,7 @@ class HomePage extends StatelessWidget {
                       companyImage: job.companyImage,
                       jobTitle: job.jobTitle,
                       companyName: job.companyName,
-                      hourlyRate: job.hourlyRate
-                  );
+                      hourlyRate: job.hourlyRate);
                 },
               ),
             ),
